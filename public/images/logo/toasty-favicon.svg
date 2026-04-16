@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <circle cx="32" cy="32" r="30" fill="#1A1A1A" stroke="#3ECDC6" stroke-width="2"/>
+  <text x="32" y="28" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="14" fill="#3ECDC6">TOASTY</text>
+  <text x="32" y="44" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="10" fill="#E8953A">DELIVERY</text>
+  <path d="M32 6 C30 12 26 14 26 14 C28 12 30 10 32 6Z" fill="#3ECDC6" opacity="0.8"/>
+  <path d="M32 6 C34 12 38 14 38 14 C36 12 34 10 32 6Z" fill="#3ECDC6" opacity="0.6"/>
+</svg>

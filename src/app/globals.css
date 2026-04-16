@@ -1,26 +1,130 @@
 @import "tailwindcss";
 
+/* ===== FONTS ===== */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/fonts/cabinet-grotesk/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* ===== TAILWIND THEME ===== */
+@theme {
+  --color-orange: #E8953A;
+  --color-orange-light: #F2B06B;
+  --color-orange-dark: #C87A2A;
+  --color-teal: #3ECDC6;
+  --color-teal-light: #6FE3DD;
+  --color-teal-dark: #2BA8A2;
+  --color-black: #1A1A1A;
+  --color-dark: #2D2D2D;
+  --color-cream: #FAF5E4;
+  --color-off-white: #F7F5F0;
+
+  --font-heading: "Cabinet Grotesk", system-ui, sans-serif;
+  --font-body: "General Sans", system-ui, sans-serif;
+}
+
+/* ===== DESIGN TOKENS ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Semantic */
+  --bg-primary: #FFFFFF;
+  --bg-section-alt: #FFF9F0;
+  --bg-dark: #1A2A1A;
+  --text-primary: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --text-on-dark: #FAF5E4;
+  --border-light: #E8E4DD;
+
+  /* Spacing — Cannabo: 120px sections, 1350px container */
+  --container-max: 1350px;
+  --section-padding: 120px;
+
+  /* Typography — Cannabo: hero 65px, sections 60px */
+  --text-hero: clamp(3rem, 5vw, 4.0625rem);
+  --text-display: clamp(2.5rem, 4.5vw, 3.75rem);
+
+  /* Announcement */
+  --announcement-height: 40px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===== BASE ===== */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.625;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+/* Section */
+.section {
+  padding-block: var(--section-padding);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-teal);
+  color: var(--color-black);
+}
+
+/* Nav link hover underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-orange);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
