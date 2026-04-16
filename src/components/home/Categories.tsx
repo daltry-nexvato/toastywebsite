@@ -65,6 +65,7 @@ export default function Categories() {
     <section className="section">
       <div className="container">
         <SectionHeading
+          accent="teal"
           label="Browse Category"
           title="Pick Your Product Type"
           subtitle="From flower to edibles, we've got your vibe covered. Browse our curated categories and find exactly what you're looking for."

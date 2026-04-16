@@ -4,6 +4,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   align?: "center" | "left";
   light?: boolean;
+  accent?: "orange" | "teal";
 }
 
 export default function SectionHeading({
@@ -12,8 +13,9 @@ export default function SectionHeading({
   subtitle,
   align = "center",
   light = false,
+  accent = "orange",
 }: SectionHeadingProps) {
-  const accentColor = light ? "#F2B06B" : "#E8953A";
+  const accentColor = light ? "#F2B06B" : accent === "teal" ? "#3ECDC6" : "#E8953A";
 
   return (
     <div className={`mb-14 ${align === "center" ? "text-center" : "text-left"}`}>

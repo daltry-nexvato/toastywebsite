@@ -111,16 +111,18 @@ export default function About() {
 
             {/* Feature grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-              {features.map((feature) => (
+              {features.map((feature, i) => {
+                const color = i % 2 === 0 ? "#E8953A" : "#3ECDC6";
+                return (
                 <div key={feature.title} className="flex items-start gap-4">
                   <div
                     className="flex items-center justify-center shrink-0 rounded-full"
                     style={{
                       width: 48,
                       height: 48,
-                      background: "#E8953A12",
-                      border: "1.5px solid #E8953A",
-                      color: "#E8953A",
+                      background: `${color}12`,
+                      border: `1.5px solid ${color}`,
+                      color,
                     }}
                   >
                     {feature.icon}
@@ -134,7 +136,8 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-              ))}
+              );
+              })}
             </div>
 
             {/* Buttons */}

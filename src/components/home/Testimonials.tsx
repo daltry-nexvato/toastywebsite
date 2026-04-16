@@ -8,6 +8,7 @@ export default function Testimonials() {
     <section className="section" style={{ background: "#FFF9F0" }}>
       <div className="container">
         <SectionHeading
+          accent="teal"
           label="Customer Love"
           title="What Our Crew Says"
           subtitle="Real talk from real customers. See why Orange County keeps choosing Toasty for their cannabis delivery."

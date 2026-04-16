@@ -52,6 +52,7 @@ export default function WhyToasty() {
     <section className="section">
       <div className="container">
         <SectionHeading
+          accent="teal"
           label="Why Choose Us"
           title="Why Toasty?"
           subtitle="We're not just another delivery service. Here's what makes us the go-to choice for cannabis in Orange County."

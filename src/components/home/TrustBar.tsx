@@ -1,3 +1,5 @@
+const badgeColors = ["#E8953A", "#3ECDC6", "#E8953A", "#3ECDC6"];
+
 const badges = [
   {
     icon: (
@@ -44,7 +46,7 @@ const badges = [
 export default function TrustBar() {
   return (
     <section
-      className="py-20"
+      className="py-24 lg:py-28"
       style={{
         background: "#FFFFFF",
         borderTop: "1px solid #E8E4DD",
@@ -53,7 +55,7 @@ export default function TrustBar() {
     >
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {badges.map((badge) => (
+          {badges.map((badge, i) => (
             <div key={badge.title} className="flex flex-col items-center text-center">
               {/* Icon circle */}
               <div
@@ -61,9 +63,9 @@ export default function TrustBar() {
                 style={{
                   width: 96,
                   height: 96,
-                  border: "2px solid #E8953A",
-                  color: "#E8953A",
-                  background: "#E8953A08",
+                  border: `2px solid ${badgeColors[i]}`,
+                  color: badgeColors[i],
+                  background: `${badgeColors[i]}08`,
                 }}
               >
                 {badge.icon}

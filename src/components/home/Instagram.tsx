@@ -56,7 +56,7 @@ export default function Instagram() {
               target="_blank"
               rel="noopener noreferrer"
               className="group relative overflow-hidden"
-              style={{ aspectRatio: "1 / 1", borderRadius: 16 }}
+              style={{ aspectRatio: "1 / 1", borderRadius: 30 }}
             >
               {/* Gradient background */}
               <div

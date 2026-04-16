@@ -102,7 +102,7 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-heading text-lg font-bold text-orange mb-6">
+            <h3 className="font-heading text-lg font-bold text-teal mb-6">
               Stay Toasty
             </h3>
             <p className="text-cream/70 text-sm mb-6">

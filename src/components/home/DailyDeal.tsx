@@ -29,7 +29,7 @@ export default function DailyDeal() {
               <LeafIcon />
               <span
                 className="font-heading font-black text-base uppercase"
-                style={{ color: "#F2B06B", letterSpacing: "1.92px" }}
+                style={{ color: "#3ECDC6", letterSpacing: "1.92px" }}
               >
                 Daily Deal
               </span>
